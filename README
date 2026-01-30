@@ -5,4 +5,4 @@ docker build -t consumer .
 docker rm consumer
 docker run -e REDIS_ADDR="redis:6379" --name consumer consumer
 
-docker compose logs -f consumer
+docker compose logs -f go-consumer
