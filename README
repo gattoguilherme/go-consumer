@@ -1,0 +1,8 @@
+## Run Docker Redis
+sudo docker run --name my-redis -p 6379:6379 redis
+
+docker build -t consumer .
+docker rm consumer
+docker run -e REDIS_ADDR="redis:6379" --name consumer consumer
+
+docker compose logs -f consumer
